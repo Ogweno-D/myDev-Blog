@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PostsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,7 +30,7 @@ Route::get('/contacts', [App\Http\Controllers\PagesController::class, 'contacts'
 Route::get('/products', [App\Http\Controllers\PagesController::class, 'products'])-> name('products');
 
 //Resource for posts
-Route::get('/blog', [App\Http\Controllers\PostsController::class]);
+Route::resource('/blog', PostsController::class);
 
 // Auth::routes();
 
@@ -41,3 +41,7 @@ Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'abou
 
 // Route::get('/about', [App\Http\Controllers\AboutController::class, 'about']) -> name('about');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -19,14 +19,20 @@ aria-label="Toggle navigation">
 			<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
-			<a class="nav-link" href="{{Route('post')}}">Post</a>
+			<a class="nav-link" href="{{Route('blog.index')}}">Posts</a>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{Route('blog.create')}}">Create Post</a>
+             </li>
+
 			</li>
 			<li class="nav-item">
-			<a class="nav-link" href="{{Route('author')}}">Author</a>
+			<a class="nav-link" href="{{Route('author')}}">Profile</a>
 			</li>
-            <li class="nav-item">
+
+            {{-- <li class="nav-item">
 			<a class="nav-link" href="{{Route('contacts')}}">Contacts</a>
-			</li>
+			</li> --}}
 		</ul>
 		<!-- End Menu -->
 		<!-- Begin Search -->
