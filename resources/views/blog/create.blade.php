@@ -1,4 +1,4 @@
-@extends('layouts.frontend')
+@extends('layouts.main')
 
 
 @section('head')
@@ -6,19 +6,19 @@
 @endsection
 @section('content')
 
-<div class="container">
+{{-- <div class="container">
 	<div class="mainheading">
 		<h1 class="sitetitle"> Food Blog</h1>
 
 	</div>
 
-</div>
+</div> --}}
 
 <div class="container">
 
 	<div class="row">
 
-		<!-- Begin Fixed Left Share -->
+		{{-- <!-- Begin Fixed Left Share -->
 		<div class="col-md-2 col-xs-12">
 			<div class="share">
 				<p>
@@ -50,7 +50,7 @@
 					</li>
 				</ul>
 			</div>
-		</div>
+		</div> --}}
 		<!-- End Fixed Left Share -->
 
 		<!-- Begin Post -->

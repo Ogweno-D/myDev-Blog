@@ -1,5 +1,5 @@
 
-@extends('layouts.frontend')
-<h1> Show the Posts Page
-
+@extends('layouts.main')
+<h1>
+   /
 </h1>

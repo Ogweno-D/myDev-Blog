@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\DashboardController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,7 +37,7 @@ Route::resource('/blog', PostsController::class);
 
 // Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])-> name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])-> name('home');
 
 // Path to Admin Dashboard or User Dashboard.
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'about'])-> name('about');
@@ -42,6 +45,12 @@ Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'abou
 // Route::get('/about', [App\Http\Controllers\AboutController::class, 'about']) -> name('about');
 
 
-Auth::routes();
+ Auth::routes();
+
+Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'redirect'])->name('dashboard');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -1,5 +1,4 @@
 
-
 <nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
@@ -18,21 +17,25 @@ aria-label="Toggle navigation">
 			<li class="nav-item active">
 			<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
 			</li>
-			<li class="nav-item">
+			{{-- <li class="nav-item">
 			<a class="nav-link" href="{{Route('blog.index')}}">Posts</a>
 
             <li class="nav-item">
                 <a class="nav-link" href="{{Route('blog.create')}}">Create Post</a>
              </li>
 
-			</li>
+			</li> --}}
 			<li class="nav-item">
 			<a class="nav-link" href="{{Route('author')}}">Profile</a>
 			</li>
 
-            {{-- <li class="nav-item">
-			<a class="nav-link" href="{{Route('contacts')}}">Contacts</a>
-			</li> --}}
+            <li class="nav-item">
+			<a class="nav-link" href="{{Route('register')}}">Register</a>
+			</li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{Route('login')}}">Log In</a>
+            </li>
 		</ul>
 		<!-- End Menu -->
 		<!-- Begin Search -->

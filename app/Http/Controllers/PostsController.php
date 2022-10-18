@@ -58,7 +58,7 @@ class PostsController extends Controller
         ]);
 
     $title = $request-> input('title');
-    $slug= Str::slug($title,'-');
+    $slug = Str::slug($title,'-');
     $body = $request-> input('body');
 
     //Image Upload
@@ -84,9 +84,12 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
         //
+        {
+            return view('blog.edit');
+        }
     }
 
     /**
