@@ -23,9 +23,24 @@
                 <li><a class="dropdown-item" href="#!">Settings</a></li>
                 <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href={{ Route("home") }}>Logout</a></li>
+                <li>
+                    <a class="dropdown-item" a href="{{ route('logout') }}" onclick = "event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Log Out</a>
+                </li>
+                {{-- <li><a class="dropdown-item" href={{ Route("home") }}>Logout</a></li> --}}
             </ul>
+            <form id= "logout-form" method="POST" action="{{ route('logout') }}">
+                @csrf
+           </form>
+
         </li>
     </ul>
+    {{-- <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                        <div class="input-group loggedinuser">
+                            <p class="nameborder"><span class = "logged">You are logged in as</span>&nbsp;{{ Auth::user()->name }}</p>
+                        </div>
+         </ul> --}}
+    
+        
 </nav>
 </html>
