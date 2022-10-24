@@ -11699,3 +11699,14 @@ body {
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
 }
+.loggedinuser{
+
+  color: white;
+}
+.nameborder{
+	padding: 2px;
+	margin-top: 15px;
+}
+.logged{
+  color: yellow;
+}
