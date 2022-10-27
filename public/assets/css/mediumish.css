@@ -62,6 +62,7 @@ section {
 	height:260px;
 	padding-left:0;
 	margin-bottom:15px;
+   
 }
 .listfeaturedtag .thumbnail {
 	background-size:cover;
@@ -440,4 +441,8 @@ ul.tags li a:hover {
 	line-height:22px;
 	border-radius:50%;
 	font-size:12px;
+}
+.post-image-specs{
+	height: 258px;
+	width: 235px;
 }

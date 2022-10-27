@@ -57,6 +57,7 @@
 		<div class="col-md-8 col-md-offset-2 col-xs-12">
 			<div class="mainheading">
         <h3>Create Posts Page</h3>
+		   @include('partials.flash_message')
 
       <form method="POST" action="{{ route('blog.store') }}" enctype="multipart/form-data">
         @csrf
@@ -71,10 +72,10 @@
 
             <div class="form-group">
                 <label for="Title">Upload Post Image</label>
-                <input type="file"class="form-control" name="postimg" id="postimg" aria-describedby="title" placeholder=" Upload Post image">
+                <input type="file"class="form-control" name="imagep" id="imagep" aria-describedby="title" placeholder=" Upload Post image">
             </div>
-        @if ($errors->first('postimg'))
-        <div class="alert-danger">{{ $errors-> first('postimg') }}</div>
+        @if ($errors->first('imagep'))
+        <div class="alert-danger">{{ $errors-> first('imagep') }}</div>
 
         @endif
 
@@ -92,9 +93,13 @@
 
         @endif
 
+                <button type="submit"  class="btn btn-primary">Submit</button>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
             </div>
+		  <div>
+			<a href="{{ Route('blog.index') }}">View Posts</a>
+		  </div>
+			
 
       </form>
  </div>

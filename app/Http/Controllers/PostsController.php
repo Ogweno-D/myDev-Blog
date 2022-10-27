@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -13,13 +13,20 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // public function index()
+    // {
+    //     //
+    //     {
+    //         return view('blog.index');
+    //     }
+    // }
+
     public function index()
     {
-        //
-        {
-            return view('blog.index');
-        }
+        $posts= Post::all();
+        return view('blog.index',compact('posts'));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -49,11 +56,9 @@ class PostsController extends Controller
         // $title=$request->input('title');
         // dd($title);
 
-
-
         $request->validate([
             'title'=> 'required|unique:posts|max:255',
-            'postimg' => 'required|image|mimes:jpg,png,jpg',
+            'imagep' => 'required|image|mimes:jpg,png,jpg',
             'body'=>'required'
         ]);
 
@@ -62,7 +67,18 @@ class PostsController extends Controller
     $body = $request-> input('body');
 
     //Image Upload
-    $imagPath= 'storage/'.$request->file('postimg') -> store('postImages','public');
+    $imagePath= 'storage/'.$request->file('imagep') -> store('postImages','public');
+
+    //Post and Save Inputs.
+    $post = new Post();
+    $post -> title = $title;
+    $post -> imagePath = $imagePath;
+    $post -> body= $body;
+    $post -> slug =$slug;
+    $post -> save();
+    
+    return redirect()->back()->with('status' , 'Blog successfully saved.');
+
 
 
     }

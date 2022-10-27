@@ -29,8 +29,10 @@ aria-label="Toggle navigation">
 			<a class="nav-link" href="{{Route('author')}}">Profile</a>
 			</li>
 
+		
+		{{-- Re-routes the user to the dashboard that offers the create blog functionality--}}
             <li class="nav-item">
-			<a class="nav-link" href="{{Route('register')}}">Register</a>
+			<a class="nav-link" href="{{Route('reroute')}}">Create Blog</a>
 			</li>
 
             <li class="nav-item">

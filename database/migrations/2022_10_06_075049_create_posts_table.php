@@ -23,11 +23,11 @@ return new class extends Migration
             //To store the image Path.
             $table-> string('imagePath');
 
-            //For the author's description.
-            $table-> string('description');
+            // //For the author's description.
+            // $table-> string('description');
 
             //For the users Id and name
-            $table->foreignId('user_id')-> references('id')->on('users')->onDelete('cascade');
+            $table-> foreignId('user_id')-> references('id')-> on('users')-> onDelete('cascade');
 
             //For the post body.
             $table-> text('body');
